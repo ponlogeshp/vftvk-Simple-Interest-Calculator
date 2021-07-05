@@ -11,14 +11,17 @@ function computeInterest()
 			alert("Principal should not be negative...Enter a positive value");
 			prinAmount.focus();
 		}
-		if(prinAmount.value=="")
+		else if(prinAmount.value=="")
 		{
 			alert("Empty values are not allowed..Enter a positive value");
 			prinAmount.focus();
 		}
-		var updatedYear=parseInt(date.getFullYear())+parseInt(noOfYears.value);
-		document.getElementById('compInterest').innerHTML="If you deposit <span style='background-color:yellow'><b>"+prinAmount.value+", </b></span>at an interest rate <span style='background-color:yellow'><b>"
-		+rateOfInterest.value+". </span></b><br>You will recieve an amount of <span style='background-color:yellow'><b>"+interest+" </b></span><br>in the year <span style='background-color:yellow'><b>"+updatedYear+" </b></span";
+		else
+		{
+			document.getElementById('compInterest').innerHTML="If you deposit <span style='background-color:yellow'><b>"+prinAmount.value+", </b></span>at an interest rate <span style='background-color:yellow'><b>"
+			+rateOfInterest.value+". </span></b><br>You will recieve an amount of <span style='background-color:yellow'><b>"+interest+" </b></span><br>in the year <span style='background-color:yellow'><b>"
+			+parseInt(date.getFullYear())+parseInt(noOfYears.value)+" </b></span";
+		}
 	}
 function updateLabelInput(val)
 	{
