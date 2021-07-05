@@ -1,4 +1,80 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+  box-sizing: border-box;
+}
+body
+{
+	background-color:#f2f2f2;
+}
+h2
+{
+	color:gray;
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+}
 
+input[type=text]{
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+select,option
+{
+	width: 10%;
+    padding: 12px;
+	font-size:14px;
+}
 
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight:bold;
+  font-size:20px;
+}
+
+input[type=submit]
+{
+  padding: 12px 20px;
+  float: right;
+}
+
+.container 
+{
+  border-radius: 20px;
+  background-color:white;
+  padding: 20px;
+  align:center;
+  width:70%;
+  height:50%;
+}
+footer
+{
+	float:left;
+	font-size:20px;
+}
+
+#compInterest
+{
+	font-size:30px;
+}
+
+.fieldData {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.inputData {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+}

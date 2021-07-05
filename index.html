@@ -1,16 +1,53 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center><div class="container">
+  <h2>Simple Interest Calculator</h2>
+  <form name="cform">
+    <div class="row">
+      <div class="fieldData">
+        <label for="amount">Amount</label>
+      </div>
+      <div class="inputData">
+        <input type="text" id="pamount" name="pamount1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="fieldData">
+        <label for="lname">Interest Rate</label>
+      </div>
+      <div class="inputData">
+        <input type="range" id="rateInterest" onchange="updateLabelInput(this.value);" name="rateInterest" min="1.5" max="40.5">
+		<label id="rangeInput"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="fieldData">
+        <label for="years">No. of Years</label>
+      </div>
+      <div class="inputData">
+        <select id="nyears" name="nyear">
+          <option value="1">1</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+		  <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" id="refButton" onclick="computeInterest()" value="Compute Interest">
+    </div>
+  </form>
+  <div id="compInterest"></div>
+  <footer>
+	 <div>© Everyone can get rich.</div>
+  </footer>
+</div></center>
+<script src="script.js">
+</script>
+</body>
 </html>
